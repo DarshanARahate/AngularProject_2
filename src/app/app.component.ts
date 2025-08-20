@@ -5,7 +5,13 @@ import { UserComponent } from './user/user.component';
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styles: [
+    `h1 {
+      color: green;
+      font-size: 24px;
+      font-weight: bold;
+    }`
+  ],
   imports: [UserComponent],
 })
 export class AppComponent {
