@@ -11,6 +11,7 @@ export class UsersComponent implements OnInit {
 
   allowNewUser = false;
   userCreatedStatus = "No User is Created";
+  userName = '';
 
   constructor() {
     setTimeout(() => {
@@ -19,7 +20,11 @@ export class UsersComponent implements OnInit {
   }
 
   changeUserCreatedStatus() {
-    this.userCreatedStatus = "User is Created";
+    this.userCreatedStatus = this.userName + " is Created";
+  }
+
+  onUpdateUser(event: Event) {
+    this.userName = (event.target as HTMLInputElement).value
   }
 
   ngOnInit(): void {
