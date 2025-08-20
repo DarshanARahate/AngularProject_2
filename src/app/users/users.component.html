@@ -1,7 +1,14 @@
 <p>users works!</p>
 
 
-<button class="btn btn-primary" [disabled]="!allowNewUser">Add Users</button>
+<button 
+    class="btn btn-primary" 
+    [disabled]="!allowNewUser"
+    (click)="changeUserCreatedStatus()"
+    >Add Users</button>
+
+    
+<div>{{ userCreatedStatus  }}</div>    
 <div [innerText]="allowNewUser"> </div>
 <app-user></app-user>
 <app-user></app-user>

@@ -10,6 +10,7 @@ import { UserComponent } from "../user/user.component";
 export class UsersComponent implements OnInit {
 
   allowNewUser = false;
+  userCreatedStatus = "No User is Created";
 
   constructor() {
     setTimeout(() => {
@@ -17,7 +18,11 @@ export class UsersComponent implements OnInit {
     }, 3000);
   }
 
+  changeUserCreatedStatus() {
+    this.userCreatedStatus = "User is Created";
+  }
+
   ngOnInit(): void {
-   
+
   }
 }
