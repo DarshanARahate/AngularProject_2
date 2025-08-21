@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UserComponent } from "../user/user.component";
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-users',
-  imports: [UserComponent],
+  imports: [UserComponent, FormsModule],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })
@@ -11,7 +12,7 @@ export class UsersComponent implements OnInit {
 
   allowNewUser = false;
   userCreatedStatus = "No User is Created";
-  userName = '';
+  userName = 'Test User';
 
   constructor() {
     setTimeout(() => {
