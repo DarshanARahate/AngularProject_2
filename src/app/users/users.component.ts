@@ -15,6 +15,7 @@ export class UsersComponent implements OnInit {
   isUserCreated = false;
   userCreatedStatus = "No User is Created";
   userName = 'Test User';
+  users = ['user1', 'user2'];
 
   constructor() {
     setTimeout(() => {
@@ -24,7 +25,8 @@ export class UsersComponent implements OnInit {
 
   changeUserCreatedStatus() {
     this.isUserCreated = true;
-    this.userCreatedStatus = this.userName + " is Created";
+    // this.userCreatedStatus = this.userName + " is Created";
+    this.users.push(this.userName);
   }
 
   onUpdateUser(event: Event) {
