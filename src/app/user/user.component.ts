@@ -5,7 +5,14 @@ import { CommonModule } from '@angular/common';
     standalone: true,
     selector: 'app-user',
     templateUrl: './user.component.html',
-    imports: [CommonModule]
+    imports: [CommonModule],
+    styles: [
+        `
+            .offline {
+                color: white;
+            }
+        `,
+    ]
 })
 export class UserComponent {
 
